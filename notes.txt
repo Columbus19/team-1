@@ -1,0 +1,48 @@
+Apprisen: Building Financial Health
+    - Mission: Work with people 1 on 1 to help people with Financial hardships
+    - Programs:
+        - Debt Management Program
+        - Financial Coaching
+        - Comprehensive Financial Comsulting
+        - Student Loan Counseling
+        - Housing Counseling
+        - Bankruptcy Coaching
+        - Financial Education Presentations
+    - Problem: As a nation we are not good at saving.
+        - Americans owe a record $1.04 Trillion in credit card Debt (Trending Up)
+        - Credit reports are not being pulled enough (Very Important)
+    - Challenge: Help people engage more with their Finances (Analytics?)
+        - Support and Encourage our clients
+        - Help clients successfully complete debt management program
+        - Help connect with clients everyday (App?)
+        - App Goals:
+            - Visual goal of where they are
+            - Access tools & resources
+            - Communicate with Customers (Push Notifications)
+
+    {% comment %} Inroads: Oldest, non-profit Leadership Development organization in the nation
+        - Mission: Deliver innovative Leadership
+        - Why Inroads?
+            - Because they have partnerships with many large companies
+            - Students apply to Inroads to get opportunities with their partner companies
+        - Challenge:
+            - Finding an effective method to deliver programs/services to stakeholders (internal and external)
+            - Want an App (iOS/Android/Web App)
+            - Idea:
+                - Download app and make engagement easy for Alumni {% endcomment %}
+
+    QA:
+        - Data about turn rate?
+            - Gaps in payments or making changes randomly
+        - They connect via
+            - Online
+            - Email
+            - Phone
+            - Video Chat
+        - Facebook Group (Private group they can join)
+        - What kind of Notifications?
+            - Motivation
+            - Currently they send text message reminders
+        - What are effective ways you have used to motivate?
+            - Email campaign
+        - 
