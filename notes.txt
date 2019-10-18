@@ -45,4 +45,48 @@ Apprisen: Building Financial Health
             - Currently they send text message reminders
         - What are effective ways you have used to motivate?
             - Email campaign
+        - Stresses importance on Visuals (Dashboard)
+        - Debt management tactics:
+            - Consolidate the payments to one location (Apprisen)
+        - What are some of your most popular tools from their website?
+            - Bugeting tools
+            - They want to know how they compare to others
+            - Financial stress test
+        - Credit Related resources are popular
+        - 2/3 of Clients like telephone interactions
+        - 30% come through online
+        - How is your marketing done?
+            # Referal System?
+            - Online Ads
+        - Are we under the assumption they are clients already?
+            - Geared towards exisiting clients
+        # Maybe a Status indiciator color coded?
+        - How do you recieve feedback?
+            - Reviews through BBB
+            - Google Reviews
+        - What kind of data do you use to predict drops?
+            # Predictive Analytics
+        - How many users do you have?
+            - 5,600 Debt Management Clients
+        - What information would you want to store?
+            - Contact information
+            - Social Security Number
+            - Liabilities
+            - Goal Assesment
+            # Personal Goal Tracking?
+        - Current Apps that have simmilar ideas:
+            - Mint
+            - Acorns
+        - How is your data being stored?
+            - Data is within internal case management
+        - What they are looking for:
+            - Data Analytics to show comparsions
+            - Reduce turn rate
+        # Relationship Oreintated (A level of Trust is ESSENTIAL)
+        # Solution making 'decisions' aka suggestions based on the online submission
+        - 70% Success rate
+        - Client fees are scaled based on income
+        # Daily Financial Tip of the Day
+        - How do you gather your data?
+            - interview style
         - 

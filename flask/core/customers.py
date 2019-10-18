@@ -9,5 +9,3 @@ class Customer():
         self.gender = gender
         self.address = address
         self.creditScore = creditScore
-
-    
