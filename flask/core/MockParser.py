@@ -1,5 +1,8 @@
 import csv
 import random
+import customers as c
+
+listOfCustomers = []
 
 def parse(file):
     #list filled with lines
@@ -15,12 +18,9 @@ def parse(file):
         gender =  items[4]
         address = items[5]
         creditScore = items[6]
-        ssn = items[7]
+        listOfCustomers.append(c.Customer(id, firstName, lastName, email, gender, address, creditScore))
 
-        #TODO: call customer method with these variables above as arguments
-
-        
-
+'''
 def generateSSN(file):
     parse(file)
     text = open(file, "r")
@@ -28,6 +28,7 @@ def generateSSN(file):
     for line in lines:
         num = random.randint(100000000, 999999999)
         customer[index] = num
+'''
 
 
 
