@@ -86,6 +86,10 @@ def contact_us():
 def calculator():
     return render_template('calculator.html')
 
+@app.route("/communication/")
+def comm():
+    return render_template('communication.html')
+
 @app.route('/my-link/<payment>', methods=['GET'])
 def callCalc(payment):
   months = DebtPlanner.debtPaymentPlanner(payment) # months to pay off debt with given payment monthly
