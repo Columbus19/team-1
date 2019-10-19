@@ -25,8 +25,11 @@ def parseData(file):
         address = items[5]
         creditScore = items[6]
         missedPayment = items[7]
+        missedTF = False
+        if (missedPayment):
+            missedTF = True
         income = items[8]
-        cust = c.Customer(id, firstName, lastName, email, gender, address, creditScore, missedPayment, income)
+        cust = c.Customer(id, firstName, lastName, email, gender, address, creditScore, missedTF, income)
         listOfCustomers.append(cust)
         listOfIncomes.append(cust.getIncome())  #implemented using a get method to maintain modularity
         listOfCreditScores.append(cust.getCreditScore())
