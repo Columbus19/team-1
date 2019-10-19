@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt 
-import sys
-sys.path.append("flask/core/MockParser")
+import MockParser as MP
 
 # frequencies 
 income = [20000, 22000, 20000, 20000, 23000, 45000, 20000, 60000, 23000, 45000, 70000, 23000, 45000, 50000, 78000,
@@ -19,7 +18,7 @@ budget = [20000, 22000, 20000, 20000, 23000, 45000, 20000, 60000, 23000, 45000, 
 74000, 78000, 38000, 78000, 78000, 78000, 68000, 80000, 70000, 55000, 38000, 55000, 69000, 68000, 80000, 80000, 38000]
 
 # plotting a histogram
-parseData("flask/static/MOCK_DATA.csv")
+MP.parseData("flask/static/MOCK_DATA.csv")
 plt.scatter(income, budget, color = 'green', alpha = 0.8)
   
 # x-axis label 

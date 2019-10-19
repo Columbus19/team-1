@@ -2,6 +2,7 @@ import csv
 import random
 import customers as c
 
+
 listOfCustomers = []
 
 #list of incomes for customers to compare customers with each other
