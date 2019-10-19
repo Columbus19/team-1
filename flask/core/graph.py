@@ -2,14 +2,13 @@ import matplotlib.pyplot as plt
 import MockParser as MP
 
 # plotting a histogram
-MP.parseData("flask/static/MOCK_DATA.csv")
 income = MP.getIncomes()
 budget = MP.getBudgets()
 creditScore = MP.getCreditScores()
 
 def budgetIncome():
     #budget vs income
-    plt.scatter(income, budget, color = 'green', alpha = 0.5)
+    plt.hist(income, budget, color = 'green', histtype = 'bar', rwidth = 0.8)
     
     # x-axis label 
     plt.xlabel('Income') 
