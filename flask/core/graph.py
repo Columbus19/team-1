@@ -25,7 +25,7 @@ income = MP.getIncomes()
 #income = np.random.rand(500)
 budget = MP.getBudgets()
 #budget = np.random.rand(500)
-plt.scatter(income, budget, color = 'green')
+plt.scatter(income, budget, color = 'green', alpha = 0.5)
   
 # x-axis label 
 plt.xlabel('Income') 
