@@ -21,11 +21,9 @@ class Customer():
         self.creditScore = creditScore
         self.missedLastPayment = missedLastPayment
         self.status = getStatus(creditScore, missedLastPayment)
-        print(int(float(income)))
         self.income = float(income)
-        print(self.income)
-        self.budget = float(income) / 12 # Savings of 20%
-        self.debt = debt
+        self.budget = float(income)*0.8 / 12 # Savings of 20%
+        self.debt = float(income) * 1.5
 
     def getIncome(self):
         return self.income
