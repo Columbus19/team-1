@@ -1,4 +1,5 @@
 import csv
+import random
 
 def parse(file):
     #list filled with lines
@@ -20,5 +21,13 @@ def parse(file):
 
         
 
-    
+def generateSSN(file):
+    parse(file)
+    text = open(file, "r")
+    lines = text.readlines()
+    for line in lines:
+        num = random.randint(100000000, 999999999)
+        customer[index] = num
+
+
 
