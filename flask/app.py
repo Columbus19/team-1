@@ -86,9 +86,29 @@ def contact_us():
 def calculator():
     return render_template('calculator.html')
 
+@app.route("/dashboard/")
+def dashboard():
+    return render_template('dashboard.html')
+
 @app.route("/communication/")
 def comm():
     return render_template('communication.html')
+
+@app.route("/counseling/")
+def counseling():
+    return render_template('counseling.html')
+
+@app.route("/whyapprisen/")
+def whyapprisen():
+    return render_template('whyapprisen.html')
+
+@app.route("/about/")
+def about():
+    return render_template('about.html')
+
+@app.route("/FAQ/")
+def FAQ():
+    return render_template('FAQ.html')
 
 @app.route('/my-link/<payment>', methods=['GET'])
 def callCalc(payment):
