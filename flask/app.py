@@ -4,6 +4,7 @@ import operator
 import re
 import nltk
 import json
+import ctypes  # An included library with Python install.   
 from rq import Queue
 from rq.job import Job
 from worker import conn
@@ -14,7 +15,6 @@ from collections import Counter
 from bs4 import BeautifulSoup
 from core import DebtPlanner 
 
-
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -23,7 +23,6 @@ db = SQLAlchemy(app)
 q = Queue(connection=conn)
 
 from models import *
-
 
 def count_and_save_words(url):
 
@@ -86,7 +85,8 @@ def calculator():
 @app.route('/my-link/<payment>', methods=['GET'])
 def callCalc(payment):
   months = DebtPlanner.debtPaymentPlanner(payment) # months to pay off debt with given payment monthly
-  return "Months to pay off debt:" + str(months)
+  message = "Months to pay off debt: " + str(months)
+  return message
 
 @app.route('/start', methods=['POST'])
 def get_counts():
