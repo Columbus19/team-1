@@ -1,6 +1,7 @@
+import pdb
 import csv
 import random
-import customers as c
+from core import customers as c
 
 
 listOfCustomers = []
@@ -38,8 +39,10 @@ def parseData(file):
         listOfIncomes.append(cust.getIncome())  #implemented using a get method to maintain modularity
         listOfCreditScores.append(cust.getCreditScore())
         listOfBudgets.append(cust.getBudget())
+    text.close()
 
-parseData("flask/static/MOCK_DATA.csv")
+#pdb.set_trace()
+parseData("static/MOCK_DATA.csv")
 
 def getCustomers():
     return listOfCustomers

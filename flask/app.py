@@ -12,6 +12,7 @@ from flask_sqlalchemy import SQLAlchemy
 from stop_words import stops
 from collections import Counter
 from bs4 import BeautifulSoup
+from core import DebtPlanner 
 
 
 app = Flask(__name__)
@@ -70,6 +71,22 @@ def count_and_save_words(url):
 def index():
     return render_template('index.html')
 
+@app.route('/generic/')
+def generic():
+    return render_template('generic.html')
+
+@app.route("/elements/")
+def contact_us():
+    return render_template('elements.html')
+
+@app.route("/calculator/")
+def calculator():
+    return render_template('calculator.html')
+
+@app.route('/my-link/<payment>', methods=['GET'])
+def callCalc(payment):
+  months = DebtPlanner.debtPaymentPlanner(payment) # months to pay off debt with given payment monthly
+  return "Months to pay off debt:" + str(months)
 
 @app.route('/start', methods=['POST'])
 def get_counts():

@@ -1,11 +1,10 @@
-import customers as c
-import MockParser as MP
+from core import MockParser as MP
 import random
 import math as m
 
 Customers = MP.getCustomers()
 
-def debtPaymentPlanner(payment): # Entered as a montly amount
+def debtPaymentPlanner(payment): # Entered as a montly amounts
     randCustomer = random.choice(Customers)
     debt = randCustomer.getDebt()
     paymentsAmount = m.ceil(int(debt)/int(payment))

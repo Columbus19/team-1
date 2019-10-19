@@ -1,4 +1,5 @@
 def getStatus(creditScore, missedLastPayment):
+    creditScore = int(creditScore)
     if creditScore < 600 and missedLastPayment == False:
         return "Fair" # Standing
     if creditScore < 600 and missedLastPayment == True:
