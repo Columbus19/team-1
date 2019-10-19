@@ -30,5 +30,6 @@ def generateSSN(file):
         customer[index] = num
 '''
 
-
+parse("flask/static/MOCK_DATA.csv")
+print(listOfCustomers)
 
