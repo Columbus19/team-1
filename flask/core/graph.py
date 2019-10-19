@@ -8,7 +8,7 @@ creditScore = MP.getCreditScores()
 
 def budgetIncome():
     #budget vs income
-    plt.hist(income, budget, color = 'green', histtype = 'bar', rwidth = 0.8)
+    plt.hist(income, 10, normed = 1, facecolor = 'green', alpha = 0.8)
     
     # x-axis label 
     plt.xlabel('Income') 
