@@ -21,7 +21,7 @@ def budgetIncome():
     plt.show()
 
 def creditScoreIncome():
-    #budget vs income
+    #credit score vs income
     plt.scatter(income, creditScore, color = 'blue', alpha = 0.5)
     
     # x-axis label 
