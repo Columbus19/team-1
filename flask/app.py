@@ -70,6 +70,10 @@ def count_and_save_words(url):
 def index():
     return render_template('index.html')
 
+@app.route('/index/', methods=['GET', 'POST'])
+def index1():
+    return render_template('index.html')
+
 @app.route('/generic/')
 def generic():
     return render_template('generic.html')
