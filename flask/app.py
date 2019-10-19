@@ -112,9 +112,9 @@ def FAQ():
 
 @app.route('/my-link/<payment>', methods=['GET'])
 def callCalc(payment):
-  months = DebtPlanner.debtPaymentPlanner(payment) # months to pay off debt with given payment monthly
-  message = "Months to pay off debt: " + str(months)
-  return message
+    months = DebtPlanner.debtPaymentPlanner(payment) # months to pay off debt with given payment monthly
+    message = "Months to pay off debt: " + str(months)
+    return message
 
 @app.route('/start', methods=['POST'])
 def get_counts():
