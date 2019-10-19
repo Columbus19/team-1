@@ -64,4 +64,6 @@ class Customer():
         print("Credit Score: " + str(self.creditScore))
         print("Missed Last Payment: " + str(self.missedLastPayment))
         print("Overall Standing: " + str(self.status))
+
+    
     
