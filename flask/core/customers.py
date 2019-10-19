@@ -38,10 +38,10 @@ class Customer():
         return str(self.email)
 
     def getBudget(self):
-        return int(self.budget)
+        return float(self.budget)
 
     def getDebt(self):
-        return int(self.debt)
+        return float(self.debt)
 
     def getId(self):
         return int(self.id)
