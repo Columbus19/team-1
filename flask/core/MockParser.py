@@ -38,6 +38,20 @@ def parseData(file):
         listOfCreditScores.append(cust.getCreditScore())
         listOfBudgets.append(cust.getBudget())
 
+parseData("flask/static/MOCK_DATA.csv")
+
+def getCustomers():
+    return listOfCustomers
+
+def getIncomes():
+    return listOfIncomes
+
+def getCreditScore():
+    return listOfCreditScores
+
+def getBudgets():
+    return listOfBudgets
+
 
 '''
 def generateSSN(file):
