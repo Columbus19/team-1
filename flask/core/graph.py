@@ -22,8 +22,10 @@ budget = [20000, 22000, 20000, 20000, 23000, 45000, 20000, 60000, 23000, 45000, 
 # plotting a histogram
 MP.parseData("flask/static/MOCK_DATA.csv")
 income = MP.getIncomes()
+#income = np.random.rand(500)
 budget = MP.getBudgets()
-plt.scatter(income, budget, color = 'green', alpha = 0.8)
+#budget = np.random.rand(500)
+plt.scatter(income, budget, color = 'green')
   
 # x-axis label 
 plt.xlabel('Income') 

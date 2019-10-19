@@ -19,6 +19,7 @@ def parseData(file):
     text = open(file, "r")
     lines = text.readlines()
     for line in lines:
+        line = line.strip()
         items = line.split(",")
         id = items[0]
         firstName = items[1]
@@ -41,15 +42,19 @@ def parseData(file):
 parseData("flask/static/MOCK_DATA.csv")
 
 def getCustomers():
+    parseData("flask/static/MOCK_DATA.csv")
     return listOfCustomers
 
 def getIncomes():
+    parseData("flask/static/MOCK_DATA.csv")
     return listOfIncomes
 
 def getCreditScore():
+    parseData("flask/static/MOCK_DATA.csv")
     return listOfCreditScores
 
 def getBudgets():
+    parseData("flask/static/MOCK_DATA.csv")
     return listOfBudgets
 
 
@@ -63,10 +68,10 @@ def generateSSN(file):
         customer[index] = num
 '''
 
-'''
+
 parseData("flask/static/MOCK_DATA.csv")
 print(listOfCustomers)
 print(listOfIncomes)
 print(listOfCreditScores)
-'''
+
 
