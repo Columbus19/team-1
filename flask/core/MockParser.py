@@ -47,7 +47,7 @@ def getCustomers():
 def getIncomes():
     return listOfIncomes
 
-def getCreditScore():
+def getCreditScores():
     return listOfCreditScores
 
 def getBudgets():

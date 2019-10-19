@@ -1,38 +1,39 @@
 import matplotlib.pyplot as plt 
 import MockParser as MP
 
-'''
-# frequencies 
-income = [20000, 22000, 20000, 20000, 23000, 45000, 20000, 60000, 23000, 45000, 70000, 23000, 45000, 50000, 78000,
-80000, 78000, 78000, 80000, 45000, 60000, 80000, 45000, 69000, 80000, 78000, 80000, 59000, 78000, 80000, 80000, 80000,
-45000, 80000, 45000, 45000, 78000, 80000, 78000, 80000, 61000, 51000, 45000, 80000, 67000, 57000, 80000, 28000, 60000, 
-50000, 78000, 78000, 57000, 77000, 68000, 56000, 58000, 62000, 78000, 45000, 38000, 68000, 68000, 30000, 79000, 68000, 
-42000, 70000, 70000, 78000, 80000, 68000, 68000, 68000, 30000, 70000, 68000, 38000, 80000, 50000, 66000, 65000, 30000,
-74000, 78000, 38000, 78000, 78000, 78000, 68000, 80000, 70000, 55000, 38000, 55000, 69000, 68000, 80000, 80000, 38000] 
-  
-# setting the ranges and no. of intervals 
-budget = [20000, 22000, 20000, 20000, 23000, 45000, 20000, 60000, 23000, 45000, 70000, 23000, 45000, 50000, 78000,
-80000, 78000, 78000, 80000, 45000, 60000, 80000, 45000, 69000, 80000, 78000, 80000, 59000, 78000, 80000, 80000, 80000,
-45000, 80000, 45000, 45000, 78000, 80000, 78000, 80000, 61000, 51000, 45000, 80000, 67000, 57000, 80000, 28000, 60000, 
-50000, 78000, 78000, 57000, 77000, 68000, 56000, 58000, 62000, 78000, 45000, 38000, 68000, 68000, 30000, 79000, 68000, 
-42000, 70000, 70000, 78000, 80000, 68000, 68000, 68000, 30000, 70000, 68000, 38000, 80000, 50000, 66000, 65000, 30000,
-74000, 78000, 38000, 78000, 78000, 78000, 68000, 80000, 70000, 55000, 38000, 55000, 69000, 68000, 80000, 80000, 38000]
-'''
-
 # plotting a histogram
 MP.parseData("flask/static/MOCK_DATA.csv")
 income = MP.getIncomes()
-#income = np.random.rand(500)
 budget = MP.getBudgets()
-#budget = np.random.rand(500)
-plt.scatter(income, budget, color = 'green', alpha = 0.5)
-  
-# x-axis label 
-plt.xlabel('Income') 
-# frequency label 
-plt.ylabel('Budget') 
-# plot title 
-plt.title('Budget vs Income') 
-  
-# function to show the plot 
-plt.show()
+creditScore = MP.getCreditScores()
+
+def budgetIncome():
+    #budget vs income
+    plt.scatter(income, budget, color = 'green', alpha = 0.5)
+    
+    # x-axis label 
+    plt.xlabel('Income') 
+    # frequency label 
+    plt.ylabel('Budget') 
+    # plot title 
+    plt.title('Budget vs Income') 
+    
+    # function to show the plot 
+    plt.show()
+
+def creditScoreIncome():
+    #budget vs income
+    plt.scatter(income, creditScore, color = 'blue', alpha = 0.5)
+    
+    # x-axis label 
+    plt.xlabel('Income') 
+    # frequency label 
+    plt.ylabel('Credit Score') 
+    # plot title 
+    plt.title('Credit Score vs Income') 
+    
+    # function to show the plot 
+    plt.show()
+
+budgetIncome()
+creditScoreIncome()
