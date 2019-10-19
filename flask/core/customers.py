@@ -11,7 +11,7 @@ def getStatus(creditScore, missedLastPayment):
 
 # Customer Class 
 class Customer():
-    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None, debt=None):
+    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None):
         self.id = id
         self.fName = fName
         self.lName = lName
