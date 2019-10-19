@@ -1,17 +1,17 @@
+def getStatus(creditScore, missedLastPayment):
+    if creditScore < 600 and missedLastPayment == False:
+        return "Fair" # Standing
+    if creditScore < 600 and missedLastPayment == True:
+        return "Poor" # Standing
+    if creditScore > 600 and missedLastPayment == False:
+        return "Excellent" # Standing
+    if creditScore > 600 and missedLastPayment == True:
+        return "Good" # Standing
+
 
 # Customer Class 
 class Customer():
-    def getStatus(self, creditScore, missedLastPayment):
-        if creditScore < 600 and missedLastPayment == False:
-            return "Fair" # Standing
-        if creditScore < 600 and missedLastPayment == True:
-            return "Poor" # Standing
-        if creditScore > 600 and missedLastPayment == False:
-            return "Excellent" # Standing
-        if creditScore > 600 and missedLastPayment == True:
-            return "Good" # Standing
-
-    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None, debt=None):
+    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None):
         self.id = id
         self.fName = fName
         self.lName = lName
@@ -21,9 +21,9 @@ class Customer():
         self.creditScore = creditScore
         self.missedLastPayment = missedLastPayment
         self.status = getStatus(creditScore, missedLastPayment)
-        self.income = income
-        self.budget = int(((income*0.8)/12)) # Savings of 20%
-        self.debt = debt
+        self.income = float(income)
+        self.budget = float(income)*0.8 / 12 # Savings of 20%
+        self.debt = float(income) * 1.5
 
     def getIncome(self):
         return self.income
@@ -38,10 +38,10 @@ class Customer():
         return str(self.email)
 
     def getBudget(self):
-        return int(self.budget)
+        return float(self.budget)
 
     def getDebt(self):
-        return int(self.debt)
+        return float(self.debt)
 
     def getId(self):
         return int(self.id)
