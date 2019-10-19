@@ -1,16 +1,16 @@
+def getStatus(creditScore, missedLastPayment):
+    if creditScore < 600 and missedLastPayment == False:
+        return "Fair" # Standing
+    if creditScore < 600 and missedLastPayment == True:
+        return "Poor" # Standing
+    if creditScore > 600 and missedLastPayment == False:
+        return "Excellent" # Standing
+    if creditScore > 600 and missedLastPayment == True:
+        return "Good" # Standing
+
 
 # Customer Class 
 class Customer():
-    def getStatus(self, creditScore, missedLastPayment):
-        if creditScore < 600 and missedLastPayment == False:
-            return "Fair" # Standing
-        if creditScore < 600 and missedLastPayment == True:
-            return "Poor" # Standing
-        if creditScore > 600 and missedLastPayment == False:
-            return "Excellent" # Standing
-        if creditScore > 600 and missedLastPayment == True:
-            return "Good" # Standing
-
     def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None, debt=None):
         self.id = id
         self.fName = fName
@@ -21,8 +21,8 @@ class Customer():
         self.creditScore = creditScore
         self.missedLastPayment = missedLastPayment
         self.status = getStatus(creditScore, missedLastPayment)
-        self.income = income
-        self.budget = int(((income*0.8)/12)) # Savings of 20%
+        self.income = float(income)
+        self.budget = float(income) / 12 # Savings of 20%
         self.debt = debt
 
     def getIncome(self):

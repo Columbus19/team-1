@@ -10,6 +10,8 @@ listOfIncomes = []
 #list of credit scores for customers
 listOfCreditScores = []
 
+listOfBudgets = []
+
 def parseData(file):
     #list filled with lines
     items = []
@@ -33,6 +35,7 @@ def parseData(file):
         listOfCustomers.append(cust)
         listOfIncomes.append(cust.getIncome())  #implemented using a get method to maintain modularity
         listOfCreditScores.append(cust.getCreditScore())
+        listOfBudgets.append(cust.getBudget())
 
 
 '''
@@ -45,8 +48,10 @@ def generateSSN(file):
         customer[index] = num
 '''
 
+'''
 parseData("flask/static/MOCK_DATA.csv")
 print(listOfCustomers)
 print(listOfIncomes)
 print(listOfCreditScores)
+'''
 
