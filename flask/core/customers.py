@@ -11,7 +11,7 @@ class Customer():
         if creditScore > 600 and missedLastPayment == True:
             return "Good" # Standing
 
-    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None):
+    def __init__(self, id=None, fName=None, lName=None, email=None, gender=None, address=None, creditScore=None, missedLastPayment=None, income=None, debt=None):
         self.id = id
         self.fName = fName
         self.lName = lName
@@ -21,6 +21,30 @@ class Customer():
         self.creditScore = creditScore
         self.missedLastPayment = missedLastPayment
         self.status = getStatus(creditScore, missedLastPayment)
+        self.income = income
+        self.budget = int(((income*0.8)/12)) # Savings of 20%
+        self.debt = debt
+
+    def getIncome(self):
+        return self.income
+    
+    def getFullName(self):
+        return str(self.fName + " " + self.lName)
+
+    def getCreditScore(self):
+        return int(self.creditScore)
+
+    def getEmail(self):
+        return str(self.email)
+
+    def getBudget(self):
+        return int(self.budget)
+
+    def getDebt(self):
+        return int(self.debt)
+
+    def getId(self):
+        return int(self.id)
 
     def notify(self):
         if self.status == "Good":
@@ -40,9 +64,4 @@ class Customer():
         print("Credit Score: " + str(self.creditScore))
         print("Missed Last Payment: " + str(self.missedLastPayment))
         print("Overall Standing: " + str(self.status))
-
-    
-
-
-
     
